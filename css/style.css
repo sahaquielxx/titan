@@ -208,7 +208,7 @@ ul {
 .services {
     /* Красивый градиент от темного к светлому */
     background: linear-gradient(180deg, #04111A 0%, #5BC1C3 50%, #F8FAFC 100%);
-    padding: 80px 0;
+    padding: 10px 0;
 }
 
 .services__header {
