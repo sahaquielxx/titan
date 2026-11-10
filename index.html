@@ -395,8 +395,11 @@
 
     <!-- Swiper JS -->
     <script src="css/libs/swiper-bundle.min.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+
+            // --- 1. СЛАЙДЕР (SWIPER) ---
             const swiper = new Swiper('.hero-swiper', {
                 loop: true,
                 speed: 800,
@@ -409,22 +412,28 @@
                     clickable: true,
                 },
             });
-        });
-    </script>
 
-    <script>
-        // Скрипт для бургер-меню
-        document.addEventListener('DOMContentLoaded', function () {
+            // --- 2. БУРГЕР-МЕНЮ ---
             const burger = document.getElementById('burger');
             const menu = document.getElementById('menu');
 
             if (burger && menu) {
+                // Открытие/закрытие по клику на бургер
                 burger.addEventListener('click', function () {
-                    // Переключаем классы
                     burger.classList.toggle('active');
                     menu.classList.toggle('active');
                 });
+
+                // Закрытие меню при клике на любую ссылку внутри него
+                const menuLinks = menu.querySelectorAll('a');
+                menuLinks.forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        burger.classList.remove('active');
+                        menu.classList.remove('active');
+                    });
+                });
             }
+
         });
     </script>
 </body>
