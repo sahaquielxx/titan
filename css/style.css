@@ -1,0 +1,753 @@
+:root {
+    --dark: #04111A;
+    --lightning: #5BC1C3;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Отступ сверху при прокрутке к якорям. 
+       100px — это примерная высота шапки (65px) + отступы (20px сверху) + запас */
+    scroll-padding-top: 67px;
+
+    /* Делаем прокрутку плавной (чтобы не прыгало, а ехало) */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ОБЩИЙ СТИЛЬ ДЛЯ КОНТЕЙНЕРОВ СЕКЦИЙ */
+.services__container,
+.objects__container,
+.documents__container,
+.about__container,
+.contacts__container {
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin-inline: auto;
+    padding: 80px 0;
+}
+
+/* =========================================
+   ШАПКА
+   ========================================= */
+.header {
+    padding: 20px 0 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.header__container {
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    background-color: var(--dark);
+    margin-inline: auto;
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 210px;
+    height: auto;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.header__menu-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.header__menu-link:hover {
+    color: var(--lightning);
+}
+
+.header__phone {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.header__phone:hover {
+    color: var(--lightning);
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+.hero {
+    padding: 0 0 60px 0;
+}
+
+.hero__container {
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin-inline: auto;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.hero-swiper {
+    width: 100%;
+}
+
+.hero__slide {
+    display: flex;
+    align-items: center;
+    /* Центрирование по вертикали */
+    justify-content: space-between;
+    /* Текст слева, картинка справа */
+    width: 100%;
+    min-height: 600px;
+    padding: 60px 80px;
+    position: relative;
+}
+
+.hero__content {
+    width: 45%;
+    max-width: 500px;
+    z-index: 2;
+    position: relative;
+}
+
+.hero__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.hero__desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--dark);
+    opacity: 0.7;
+}
+
+.hero__image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    max-width: 60%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Точки пагинации (только для ПК) */
+.swiper-pagination {
+    text-align: left !important;
+    bottom: 30px !important;
+    padding-left: 80px !important;
+}
+
+.swiper-pagination-bullet {
+    background: var(--dark) !important;
+    opacity: 0.2 !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--lightning) !important;
+    opacity: 1 !important;
+}
+
+/* Защита от прыжков при загрузке */
+.swiper {
+    overflow: hidden;
+}
+
+/* =========================================
+   СЕКЦИЯ УСЛУГИ
+   ========================================= */
+.services {
+    /* Красивый градиент от темного к светлому */
+    background: linear-gradient(180deg, #04111A 0%, #5BC1C3 50%, #F8FAFC 100%);
+    padding: 80px 0;
+}
+
+.services__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.services__subtitle {
+    font-size: 16px;
+    color: var(--white);
+}
+
+/* Сетка: 3 колонки */
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Карточка */
+.service-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+    /* Аккуратная рамка вместо тени */
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s;
+}
+
+/* При наведении рамка становится бирюзовой */
+.service-card:hover {
+    border-color: var(--lightning);
+}
+
+/* Картинка */
+.service-card__image-wrap {
+    width: 100%;
+    /* Убираем жесткую высоту, делаем квадрат */
+    aspect-ratio: 1 / 1;
+    background-color: #F1F5F9;
+    overflow: hidden;
+}
+
+.service-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Заполняет квадрат */
+    object-position: center;
+    /* Берет центр картинки */
+}
+
+/* Текст */
+.service-card__content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-card__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.service-card__desc {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.5;
+}
+
+/* =========================================
+   СЕКЦИЯ ОБЪЕКТЫ
+   ========================================= */
+.objects__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.objects__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+/* Обертка со скроллом */
+.objects__scroll {
+    background-color: var(--white);
+    border: 1px solid #E2E8F0;
+    /* Аккуратная рамка */
+    border-radius: 12px;
+    padding: 30px 40px;
+
+    /* Ограничиваем высоту и включаем скролл */
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Стилизация самого списка */
+.objects__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Расстояние между строками */
+}
+
+.objects__list li {
+    font-size: 16px;
+    color: var(--dark);
+    line-height: 1.5;
+    position: relative;
+    padding-left: 24px;
+    /* Место для галочки */
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #E2E8F0;
+    /* Легкая линия-разделитель */
+}
+
+/* Убираем линию у последнего элемента */
+.objects__list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Ставим бирюзовую галочку перед каждым объектом */
+.objects__list li::before {
+    content: "✓";
+    /* Или можно использовать "▹" */
+    color: var(--lightning);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* --- Красивый скроллбар (для Chrome/Safari) --- */
+.objects__scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.objects__scroll::-webkit-scrollbar-track {
+    background: #F1F5F9;
+    border-radius: 4px;
+}
+
+.objects__scroll::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 4px;
+}
+
+.objects__scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--lightning);
+}
+
+/* =========================================
+   СЕКЦИЯ ДОКУМЕНТЫ
+   ========================================= */
+.documents__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.documents__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.documents__subtitle {
+    font-size: 16px;
+    color: #64748B;
+}
+
+/* Контейнер с горизонтальной прокруткой */
+.documents__scroll {
+    display: flex;
+    gap: 24px;
+    /* Расстояние между карточками */
+    overflow-x: auto;
+    /* Включаем боковой скролл */
+    padding-bottom: 20px;
+    /* Место под скроллбар */
+    scroll-snap-type: x mandatory;
+    /* Карточки будут прилипать */
+}
+
+/* Стилизация скроллбара (чтобы не был страшным) */
+.documents__scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.documents__scroll::-webkit-scrollbar-track {
+    background: #E2E8F0;
+    border-radius: 4px;
+}
+
+.documents__scroll::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 4px;
+}
+
+.documents__scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--lightning);
+}
+
+/* --- САМА КАРТОЧКА --- */
+.document-card {
+    flex: 0 0 240px;
+    /* Фиксированная ширина карточки 240px */
+    scroll-snap-align: start;
+    /* Прилипание к левому краю */
+    background-color: var(--white);
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 16px;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+/* При наведении рамка становится бирюзовой */
+.document-card:hover {
+    border-color: var(--lightning);
+}
+
+/* Обертка для картинки (делаем пропорции листа А4) */
+.document-card__image-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1.414;
+    /* Пропорции листа А4 */
+    background-color: #F1F5F9;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.document-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    /* Показываем верхнюю часть документа */
+}
+
+/* Название документа */
+.document-card__title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark);
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* =========================================
+   СЕКЦИЯ О КОМПАНИИ
+   ========================================= */
+.about {
+    padding-bottom: 10px;
+}
+
+.about__header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.about__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 16px;
+}
+
+.about__subtitle {
+    font-size: 16px;
+    color: #64748B;
+    line-height: 1.6;
+}
+
+/* Список преимуществ в 2 колонки */
+.about__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about__list-item {
+    font-size: 16px;
+    color: var(--dark);
+    line-height: 1.5;
+    position: relative;
+    padding-left: 28px;
+}
+
+.about__list-item::before {
+    content: "✓";
+    color: var(--lightning);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+}
+
+/* =========================================
+   ПОДВАЛ (КОНТАКТЫ)
+   ========================================= */
+.contacts {
+    background-color: var(--dark);
+    /* Уменьшили отступы внутри контейнера: 30px сверху и снизу */
+    padding: 30px 0;
+    color: var(--white);
+    text-align: center;
+
+    /* Скругление ТОЛЬКО по верхнему краю */
+    border-radius: 15px 15px 0 0;
+}
+
+.contacts__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    /* Максимально сжали расстояние между строками */
+}
+
+.contacts__title {
+    font-size: 30px;
+    /* Уменьшили заголовок */
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+.contacts__phone {
+    font-size: 28px;
+    /* Сделали телефон чуть меньше */
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contacts__phone:hover {
+    color: var(--lightning);
+}
+
+.contacts__info {
+    font-size: 14px;
+    color: #94A3B8;
+    line-height: 1.4;
+    margin-top: 5px;
+    /* Уменьшили отступ сверху */
+}
+
+.contacts__info a {
+    color: #94A3B8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contacts__info a:hover {
+    color: var(--lightning);
+}
+
+/* =========================================
+   АДАПТИВ (ПЛАНШЕТЫ И ТЕЛЕФОНЫ)
+   ========================================= */
+
+/* Стили для бургера (по умолчанию скрыт на ПК) */
+.burger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    transition: 0.3s;
+}
+
+/* --- ПЛАНШЕТЫ (до 992px) --- */
+@media (max-width: 1000px) {
+
+    /* Услуги в 2 колонки */
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Уменьшаем заголовки */
+    .hero__title {
+        font-size: 32px;
+    }
+
+    .services__title,
+    .objects__title,
+    .documents__title,
+    .about__title {
+        font-size: 28px;
+    }
+
+    /* О компании в одну колонку */
+    .about__list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- ТЕЛЕФОНЫ (до 768px) --- */
+@media (max-width: 1000px) {
+
+    /* 1. ШАПКА И БУРГЕР */
+    .header__container {
+        padding: 10px 20px;
+        min-height: auto;
+    }
+
+    .burger {
+        display: flex;
+        /* Показываем бургер */
+        order: 3;
+        /* Ставим его после логотипа */
+    }
+
+    .header__phone {
+        display: none;
+        /* Прячем телефон на телефонах, чтобы не мешал */
+    }
+
+    /* Выпадающее меню */
+    .header__menu {
+        display: none;
+        /* Прячем по умолчанию */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+
+        /* Вот эти параметры делают его карточкой */
+        left: 20px;
+        right: 20px;
+        margin-top: 10px;
+        /* Отступ от шапки */
+        border-radius: 10px;
+        /* Скругляем все углы */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        /* Легкая тень, чтобы выделялось */
+
+        background-color: var(--dark);
+        padding: 20px;
+        gap: 15px;
+        z-index: 999;
+    }
+
+    /* Класс, который добавляет JS при клике */
+    .header__menu.active {
+        display: flex;
+    }
+
+    /* Анимация бургера в крестик */
+    .burger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* 2. HERO (Первый экран) */
+    .hero__slide {
+        flex-direction: column;
+        /* Текст сверху, картинка снизу */
+        padding: 40px 20px;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .hero__content {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero__image {
+        position: static;
+        /* Убираем абсолютное позиционирование */
+        transform: none;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .swiper-pagination {
+        position: static !important;
+        margin-top: 20px;
+        text-align: center !important;
+        padding-left: 0 !important;
+    }
+
+    /* 3. СЕТКИ (Услуги в 1 колонку) */
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 4. ОБЪЕКТЫ (уменьшаем высоту скролла) */
+    .objects__scroll {
+        max-height: 300px;
+        padding: 20px;
+    }
+
+    /* 5. ПОДВАЛ */
+    .contacts {
+        padding: 30px 20px;
+    }
+
+    .contacts__phone {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТИТАНСПЕЦАВТО</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/titan-favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- CSS Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container">
+            <nav class="header__nav">
+                <img src="img/logo.svg" class="logo" alt="Логотип">
+                <!-- Кнопка бургера (видна только на телефонах) -->
+                <button class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="header__menu" id="menu">
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#hero">Главная</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#services">Услуги</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#objects">Объекты</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#documents">Документы</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#about">О компании</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+                <a class="header__phone" href="tel:89292952801">8 929-295-28-01</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero__container">
+
+                <!-- Блок слайдера -->
+                <div class="swiper hero-swiper">
+
+                    <!-- Обертка слайдов -->
+                    <div class="swiper-wrapper">
+
+                        <!-- СЛАЙД 1 -->
+                        <div class="swiper-slide hero__slide">
+                            <div class="hero__content">
+                                <h1 class="hero__title">ПРОФЕССИОНАЛЬНЫЙ МОНТАЖ<br>ИНЖЕНЕРНЫХ СИСТЕМ</h1>
+                                <p class="hero__desc">Работаем в ХМАО с 2007 года</p>
+                            </div>
+                            <img class="hero__image" src="img/hero-slide1.jpg" alt="Монтаж систем">
+                        </div>
+
+                        <!-- СЛАЙД 2 -->
+                        <div class="swiper-slide hero__slide">
+                            <div class="hero__content">
+                                <h1 class="hero__title">ПРОЕКТИРОВАНИЕ<br>ЛЮБОЙ СЛОЖНОСТИ</h1>
+                                <p class="hero__desc">Разработаем проект под ключ</p>
+                            </div>
+                            <img class="hero__image" src="img/hero-slide2.jpg" alt="Проектирование">
+                        </div>
+
+                    </div>
+                    <!-- Точки пагинации (внутри слайдера) -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- СЕКЦИЯ УСЛУГИ -->
+        <section class="services" id="services">
+            <div class="services__container">
+                <div class="services__header">
+                    <h2 class="services__title">Наши услуги</h2>
+                    <p class="services__subtitle">Профессионально, с гарантией и полным циклом работ</p>
+                </div>
+
+                <div class="services__grid">
+                    <!-- Карточка 1 -->
+                    <div class="service-card">
+                        <div class="service-card__image-wrap">
+                            <img src="img/service-project.jpg" alt="Проектирование" class="service-card__image">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Проектирование объектов любой сложности</h3>
+                            <p class="service-card__desc">Разработка рабочей документации (ПСД) для инженерных систем.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 2 -->
+                    <div class="service-card">
+                        <div class="service-card__image-wrap">
+                            <img src="img/service-plumbing.jpg" alt="Сантехника" class="service-card__image">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Сантехника и отопление</h3>
+                            <p class="service-card__desc">Водоснабжение, канализация, отопительные системы — под ключ.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 3 -->
+                    <div class="service-card">
+                        <div class="service-card__image-wrap">
+                            <img src="img/service-electric.jpg" alt="Электроснабжение" class="service-card__image">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Электроснабжение</h3>
+                            <p class="service-card__desc">Прокладка сетей, заземление, молниезащита, генераторы с АВР.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 4 -->
+                    <div class="service-card">
+                        <div class="service-card__image-wrap">
+                            <img src="img/service-ventilation.jpg" alt="Вентиляция и кондиционирование"
+                                class="service-card__image">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Вентиляция и кондиционирование</h3>
+                            <p class="service-card__desc">Проектирование, монтаж, пусконаладка для любых помещений.</p>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 5 -->
+                    <div class="service-card">
+                        <div class="service-card__image-wrap">
+                            <img src="img/service-fire.jpg" alt="Пожарная безопасность" class="service-card__image">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Пожарная и охранная сигнализация</h3>
+                            <p class="service-card__desc">Лицензия МЧС. Монтаж, обслуживание, системы оповещения.</p>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 6 -->
+                    <div class="service-card">
+                        <div class="service-card__image-wrap">
+                            <img src="img/service-video-control.jpg" alt="Видеонаблюдение" class="service-card__image">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Видеонаблюдение</h3>
+                            <p class="service-card__desc">IP-камеры, удалённый доступ, системы контроля доступа (СКУД).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 7 -->
+                    <div class="service-card">
+                        <div class="service-card__image-wrap">
+                            <img src="img/service-cleaning.jpg" alt="Глубокая чистка вентиляции"
+                                class="service-card__image">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Глубокая чистка вентиляции</h3>
+                            <p class="service-card__desc">Видеообследование, чистка по нормам пожарной безопасности.</p>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 8 -->
+                    <div class="service-card">
+                        <div class="service-card__image-wrap">
+                            <img src="img/service-season.jpg" alt="Подготовка к сезону" class="service-card__image">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Подготовка к сезонной эксплуатации</h3>
+                            <p class="service-card__desc">Консервация и расконсервация систем отопления, промывка.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ОБЪЕКТЫ -->
+        <section class="objects" id="objects">
+            <div class="objects__container">
+                <div class="objects__header">
+                    <h2 class="objects__title">Объекты, сданные в эксплуатацию</h2>
+                </div>
+                <!-- Обертка со скроллом -->
+                <div class="objects__scroll">
+                    <ul class="objects__list">
+                        <li>Гостиница "МИСНЭ", г. Ханты-Мансийск (2008)</li>
+                        <li>Центр медицинской профилактики, г. Ханты-Мансийск (2009)</li>
+                        <li>Сеть ресторанов "Яза-Суши", ресторан "Посейдон" (2010)</li>
+                        <li>Кожвендиспансер, г. Ханты-Мансийск (2010)</li>
+                        <li>ТРК "Оазис Плаза", магазины "Кари", "Адидас", "Рибок" и др., г. Нягань (2011)</li>
+                        <li>Завод по производству особо чистого полярного кварцевого концентрата, г. Нягань (2011-2012)
+                        </li>
+                        <li>БУ ХМАО-Югры "ОКБ", г. Ханты-Мансийск (2012)</li>
+                        <li>Пожарное депо в п. Елезарово, п. Половинка, п. Покур (2011-2012)</li>
+                        <li>База УВД, г. Ханты-Мансийск (2013)</li>
+                        <li>МП "Водоканал", г. Ханты-Мансийск (2013)</li>
+                        <li>Ресторан "Старый двор", г. Ханты-Мансийск (2013)</li>
+                        <li>Жилой многоквартирный дом по ул. Дзержинского 41, г. Ханты-Мансийск (2014)</li>
+                        <li>Автомойка "Пять элементов", г. Ханты-Мансийск (2014)</li>
+                        <li>Офтальмология, г. Ханты-Мансийск (2014)</li>
+                        <li>Департамент жилищной политики, г. Ханты-Мансийск (2015)</li>
+                        <li>Негосударственный пенсионный фонд, г. Ханты-Мансийск (2015)</li>
+                        <li>МРЭО ГИБДД, г. Ханты-Мансийск (2015)</li>
+                        <li>Издательский центр, г. Ханты-Мансийск (2015)</li>
+                        <li>Комната помощника губернатора, Дом Правительства и Дума ХМАО-Югры (2016)</li>
+                        <li>Детский сад на 240 мест в п. Горноправдинск (2015-2016)</li>
+                        <li>Жилой многоквартирный дом по ул. Гагарина, 149, г. Ханты-Мансийск (2011-2014)</li>
+                        <li>Жилой микрорайон «Югорская звезда-2», г. Ханты-Мансийск (2013)</li>
+                        <li>Жилой многоквартирный дом по ул. Сирина, мкр. Романовский (2014)</li>
+                        <li>Центр профессиональной патологии по ул. Рознина, 73 (2016)</li>
+                        <li>Административно-торгово-бытовой комплекс, г. Нягань (2015)</li>
+                        <li>Жилой комплекс по ул. Гагарина, 39, г. Ханты-Мансийск (2013-2015)</li>
+                        <li>Жилой многоквартирный дом по ул. Сирина, мкр. Романовский, 2-я очередь (2013-2015)</li>
+                        <li>Стоматологический центр, ул. Сирина, 74 (2015)</li>
+                        <li>Жилой многоквартирный дом по ул. Б. Лосева, 2-я очередь (2017)</li>
+                        <li>Детский сад в п. Ягурьях (2017-2018)</li>
+                        <li>«Красноленинский НПЗ», г. Нягань (2020)</li>
+                        <li>«ЭНЕРГОКОМПЛЕКС», г. Нягань (2020)</li>
+                        <li>Испытательная лаборатория и Склад, Западно-Эргинское месторождение (2020)</li>
+                        <li>Магазин склад, г. Ханты-Мансийск, ул. Мира 122а (2020-2021)</li>
+                        <li>АО «ЮТЭК-Региональные сети», корпус №5 (2021-2023)</li>
+                        <li>Магазин «Эльдорадо», г. Ханты-Мансийск, ул. Энгельса 1 (2021)</li>
+                        <li>БУ "Ханты-Мансийская государственная медицинская академия", ул. Мира, 40 (2021)</li>
+                        <li>Комплекс по производству кварцевого концентрата, 2 этап, г. Нягань (2023)</li>
+                        <li>Комплексная застройка жилого квартала №22, г. Нижневартовск (2020-2023)</li>
+                        <li>Многоквартирный жилой дом по ул. Гагарина 156, г. Ханты-Мансийск (2021-2022)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ДОКУМЕНТЫ -->
+        <section class="documents" id="documents">
+            <div class="documents__container">
+                <div class="documents__header">
+                    <h2 class="documents__title">Лицензии и документы</h2>
+                    <p class="documents__subtitle">Все необходимые разрешения для работы</p>
+                </div>
+                <!-- Обертка для горизонтального скролла -->
+                <div class="documents__scroll">
+
+                    <!-- Карточка 1 -->
+                    <a href="docs/accreditation-fire-safety.pdf" target="_blank" class="document-card">
+                        <div class="document-card__image-wrap">
+                            <!-- Путь изменен на docs-preview -->
+                            <img src="img/docs-preview/accreditation-fire-safety.jpg" alt="Аккредитация"
+                                class="document-card__image">
+                        </div>
+                        <div class="document-card__title">Аккредитация в области пожарной безопасности</div>
+                    </a>
+
+                    <!-- Карточка 2 -->
+                    <a href="docs/certificate-nsopb.pdf" target="_blank" class="document-card">
+                        <div class="document-card__image-wrap">
+                            <img src="img/docs-preview/certificate-nsopb.jpg" alt="Сертификат НСОПБ"
+                                class="document-card__image">
+                        </div>
+                        <div class="document-card__title">Сертификат НСОПБ</div>
+                    </a>
+
+                    <!-- Карточка 3 -->
+                    <a href="docs/certificate-registration.pdf" target="_blank" class="document-card">
+                        <div class="document-card__image-wrap">
+                            <img src="img/docs-preview/certificate-registration.jpg" alt="Свидетельство о регистрации"
+                                class="document-card__image">
+                        </div>
+                        <div class="document-card__title">Свидетельство о регистрации ООО</div>
+                    </a>
+
+                    <!-- Карточка 4 -->
+                    <a href="docs/extract-egrip.pdf" target="_blank" class="document-card">
+                        <div class="document-card__image-wrap">
+                            <img src="img/docs-preview/extract-egrip.jpg" alt="Выписка из ЕГРИП"
+                                class="document-card__image">
+                        </div>
+                        <div class="document-card__title">Выписка из ЕГРИП</div>
+                    </a>
+
+                    <!-- Карточка 5 -->
+                    <a href="docs/extract-sro.pdf" target="_blank" class="document-card">
+                        <div class="document-card__image-wrap">
+                            <img src="img/docs-preview/extract-sro.jpg" alt="Выписка из реестра СРО"
+                                class="document-card__image">
+                        </div>
+                        <div class="document-card__title">Выписка из реестра СРО</div>
+                    </a>
+
+                    <!-- Карточка 6 -->
+                    <a href="docs/license-disinfection.pdf" target="_blank" class="document-card">
+                        <div class="document-card__image-wrap">
+                            <img src="img/docs-preview/license-disinfection.jpg" alt="Лицензия на дезинфекцию"
+                                class="document-card__image">
+                        </div>
+                        <div class="document-card__title">Лицензия на дезинфекцию</div>
+                    </a>
+
+                    <!-- Карточка 7 -->
+                    <a href="docs/license-fire-safety.pdf" target="_blank" class="document-card">
+                        <div class="document-card__image-wrap">
+                            <img src="img/docs-preview/license-fire-safety.jpg"
+                                alt="Лицензия на монтаж систем пожарной безопасности" class="document-card__image">
+                        </div>
+                        <div class="document-card__title">Лицензия на монтаж систем пожарной безопасности</div>
+                    </a>
+
+                    <!-- Карточка 8 -->
+                    <a href="docs/license-mchs-2015.pdf" target="_blank" class="document-card">
+                        <div class="document-card__image-wrap">
+                            <img src="img/docs-preview/license-mchs-2015.jpg" alt="Лицензия МЧС России (2015)"
+                                class="document-card__image">
+                        </div>
+                        <div class="document-card__title">Лицензия МЧС России (2015)</div>
+                    </a>
+
+                    <!-- Карточка 9 -->
+                    <a href="docs/license-mchs-2026.pdf" target="_blank" class="document-card">
+                        <div class="document-card__image-wrap">
+                            <img src="img/docs-preview/license-mchs-2026.jpg" alt="Лицензия МЧС России (2026)"
+                                class="document-card__image">
+                        </div>
+                        <div class="document-card__title">Лицензия МЧС России (2026)</div>
+                    </a>
+
+                    <!-- Карточка 10 -->
+                    <a href="docs/license-zkh.pdf" target="_blank" class="document-card">
+                        <div class="document-card__image-wrap">
+                            <img src="img/docs-preview/license-zkh.jpg" alt="Лицензия ЖКХ" class="document-card__image">
+                        </div>
+                        <div class="document-card__title">Лицензия ЖКХ</div>
+                    </a>
+
+                    <!-- Карточка 11 -->
+                    <a href="docs/certificate-cleaning.pdf" target="_blank" class="document-card">
+                        <div class="document-card__image-wrap">
+                            <img src="img/docs-preview/sertificate-cleaning.jpg" alt="Сертификат"
+                                class="document-card__image">
+                        </div>
+                        <div class="document-card__title">Сертификат о прохождении подготовки и обучения по очистке и
+                            дезинфекции систем вентиляции</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- О КОМПАНИИ -->
+        <section class="about" id="about">
+            <div class="about__container">
+                <div class="about__header">
+                    <h2 class="about__title">О компании</h2>
+                    <p class="about__subtitle"><strong>Опыт работы с 2007 года.</strong> Организация является
+                        стабильным, надежным
+                        деловым партнером</p>
+                </div>
+                <ul class="about__list">
+                    <li class="about__list-item">Все необходимые разрешения на работу</li>
+                    <li class="about__list-item">Полная обеспеченность транспортом и оборудованием</li>
+                    <li class="about__list-item">Штат опытных сотрудников с профильным образованием</li>
+                    <li class="about__list-item">Устойчивое финансовое положение</li>
+                    <li class="about__list-item">Индивидуальный подход к каждому заказчику</li>
+                </ul>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- КОНТАКТЫ (ПОДВАЛ) -->
+    <footer class="contacts" id="contacts">
+        <div class="contacts__container">
+            <div class="contacts__header">
+                <h2 class="contacts__title">Свяжитесь с нами</h2>
+                <a class="contacts__phone" href="tel:89292952801">8 929-295-28-01</a>
+                <p class="contacts__info">titanspets.avto@bk.ru<br>ИНН ********** ОГРН *************</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.hero-swiper', {
+                loop: true,
+                speed: 800,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
+    </script>
+
+    <script>
+        // Скрипт для бургер-меню
+        document.addEventListener('DOMContentLoaded', function () {
+            const burger = document.getElementById('burger');
+            const menu = document.getElementById('menu');
+
+            if (burger && menu) {
+                burger.addEventListener('click', function () {
+                    // Переключаем классы
+                    burger.classList.toggle('active');
+                    menu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
